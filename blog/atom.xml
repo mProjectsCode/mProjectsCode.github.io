@@ -11,7 +11,7 @@ layout: feed
 	<id>http://mProjectsCode.github.io/blog</id>
 	<author>
 		<name>Moritz</name>
-		<email>hankquinlanhub@gmail.com</email>
+		<email>m.projects.code@gmail.com</email>
 	</author>
 
 	{% for post in site.posts %}

@@ -1,4 +1,9 @@
 name: Moritz Jung
 markdown: kramdown
-permalink: /blog/:year/:month/:day/:title
-permalink: /project/:year/:month/:day/:title
+permalink: /blog/:year/:month/:day/:title#
+collections: 
+  blender-projects:
+    output: true
+    permalink: /:collection/:title
+  programming-projects:
+    output: true
