@@ -3,10 +3,54 @@ layout: default
 title: Moritz Blog
 ---
 <h1>{{ page.title }}</h1>
-<ul class="posts">
-
+<p>Here you can see my bolg, where I post the more interesting stuff I do as a hobby programmer.</p>
+<ul class="array">
     {% for post in site.posts %}
-    <li><span>{{ post.date | date_to_string }}</span> | <a href="{{ post.url }}"
-            title="{{ post.title }}">{{ post.title }}</a></li>
+    <li class="array">
+        <h3 class="array">{{ post.title }}</h3>
+        <p class="array"">{{ post.date | date_to_string }}</p>
+    </li>
+    <br>
     {% endfor %}
 </ul>
+
+<style>
+    *.array {
+        padding: 0;
+        margin: 0;
+    }
+
+    ul.array {
+        list-style-type: none;
+        width: auto;
+    }
+
+    li.array img.array {
+        float: left;
+        margin: 0 0 0 0;
+        width: 100%;
+        height: auto;
+    }
+
+    li.array {
+        padding: 10px;
+        overflow: auto;
+    }
+
+    li:hover.array {
+        background: #ddd;
+        cursor: pointer;
+    }
+
+    h3.array {
+        font-size: 1.5em;
+        line-height: 2em;
+        font-family: 'Helvetica', 'Arial', 'Sans-Serif';
+    }
+
+    p.array {
+        font-size: 1em;
+        line-height: 1em;
+        color: #555;
+    }
+</style>

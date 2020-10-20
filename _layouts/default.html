@@ -5,20 +5,27 @@
 	<title>{{ page.title }}</title>
 	<!-- link to main stylesheet -->
 	<link rel="stylesheet" type="text/css" href="/css/main.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-0HDBB98VJL"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+
+		gtag('config', 'G-0HDBB98VJL');
+	</script>
 </head>
 
 <body>
 	<nav>
 		<ul>
 			<li><a href="/">Home</a></li>
-			<li><a href="/about">About</a></li>
 			<li><a href="/blog">Blog</a></li>
 			<li><a href="/blender-projects">Blender</a></li>
 		</ul>
 	</nav>
 	<div class="container">
-		<img src="https://ps.w.org/under-construction-page/assets/screenshot-2.png" alt="" style="width: 100%; height: auto;">
-		<span>Source: https://ps.w.org/under-construction-page/assets/screenshot-2.png</span>
 		{{ content }}
 
 	</div><!-- /.container -->
@@ -27,6 +34,8 @@
 			<li><a href="mailto:mProjectsCode@gmail.com">email</a></li>
 			<li><a href="https://github.com/mProjectsCode">github</a></li>
 			<li style="float: right;"><a href="">Copyright ©2020 All Rights Reserved.</a></li>
+			<li style="float: right;"><a href="/privacy_statement_german">Datenschutz Erklärung</a></li>
+			<li style="float: right;"><a href="/privacy_statement_english">Privacy Policy</a></li>
 		</ul>
 	</footer>
 </body>

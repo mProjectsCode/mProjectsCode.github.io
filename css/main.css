@@ -1,6 +1,19 @@
 body {
     margin: 60px auto;
-    width: 70%;
+    width: 95%;
+}
+@media only screen and (min-width: 800px) {
+    body {
+        margin: 60px auto;
+        width: 60%;
+    }
+}
+li {
+    font-size: 1em;
+    line-height: 1.25em;
+    color: #333;
+    font-family:'Helvetica', 'Arial', 'Sans-Serif';
+    text-align: justify;
 }
 nav ul, footer ul {
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
@@ -23,14 +36,30 @@ h1 {
     font-size: 3em;
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
 }
+h2 {
+    font-size: 2.5em;
+    font-family:'Helvetica', 'Arial', 'Sans-Serif';
+}
 h3 {
     font-size: 2em;
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
 }
-p {
+h4 {
     font-size: 1.5em;
-    line-height: 1.4em;
+    font-family:'Helvetica', 'Arial', 'Sans-Serif';
+}
+h5 {
+    font-size: 1.5em;
+}
+h6 {
+    font-size: 1em;
+}
+p {
+    font-size: 1em;
+    line-height: 1.25em;
     color: #333;
+    font-family:'Helvetica', 'Arial', 'Sans-Serif';
+    text-align: justify;
 }
 footer {
     border-top: 1px solid #d5d5d5;
