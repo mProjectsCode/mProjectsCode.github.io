@@ -5,11 +5,11 @@ title: Moritz Blender Projects
 <h1>{{ page.title }}</h1>
 <p>Here you can see some of my better <a href="https:\\www.blender.org">Blender</a> projects.</p>
 <ul class="array">
-    {% for blender-project in site.blender-projects %}
-    <li class="array" onclick="location.href='{{ blender-project.url }}'">
-        <img class="array" src="{{ blender-project.img}}" alt="">
-        <h3 class="array">{{ blender-project.title }}</h3>
-        <p class="array">{{ blender-project.date | date_to_string }}</p>
+    {% for project in site.blender-projects %}
+    <li class="array" onclick="location.href='{{ project.url }}'">
+        <img class="array" src="{{ project.img}}" alt="">
+        <h3 class="array">{{ project.title }}</h3>
+        <p class="array">{{ project.date | date_to_string }}</p>
     </li>
     <br>
     {% endfor %}
