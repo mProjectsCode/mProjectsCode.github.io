@@ -8,6 +8,9 @@ body {
         width: 60%;
     }
 }
+
+
+
 li {
     font-size: 1em;
     line-height: 1.25em;
@@ -25,6 +28,7 @@ nav ul li, footer ul li {
     display: inline;
     margin-right: 20px;
 }
+
 a {
     text-decoration: none;
     color: #999;
@@ -75,9 +79,6 @@ h6, .h6 {
     font-family: 'Roboto', sans-serif;
 }
 
-
-
-
 p {
     font-size: 1em;
     line-height: 1.25em;
@@ -85,6 +86,7 @@ p {
     font-family: 'Inconsolata', monospace;
     text-align: justify;
 }
+
 footer {
     font-size: .8em;
 }
@@ -98,6 +100,99 @@ ul.posts li {
     list-style: none;
 }
 
+pre.code {
+    background-color: #fff;
+    position: relative;
+    border-radius: unset !important;
+    border-style: solid !important;
+    border-width: medium !important;
+    border-color: #000 !important;
+}
+
+pre code {
+    position: relative;
+    z-index: 1000;
+    display: block;
+    max-height: 450px;
+    padding: 1.5rem;
+    overflow: auto;
+    font-size: 1.25em;
+}
+
+*.array {
+    padding: 0;
+    margin: 0;
+}
+
+ul.array {
+    list-style-type: none;
+    width: auto;
+}
+
+li.array img.array {
+    float: left;
+    margin: 0 0 0 0;
+    width: 100%;
+    height: auto;
+}
+
+li.array {
+    padding: 10px;
+    overflow: auto;
+    border-radius: unset !important;
+    border-style: solid !important;
+    border-width: medium !important;
+    border-color: transparent !important;
+}
+
+li:hover.array {
+    border-radius: unset !important;
+    border-style: solid !important;
+    border-width: medium !important;
+    border-color: #000 !important;
+    cursor: pointer;
+}
+
+h3.array {
+    font-size: 1.5em;
+    line-height: 2em;
+    font-family: 'Helvetica', 'Arial', 'Sans-Serif';
+}
+
+p.array {
+    font-size: 1em;
+    line-height: 1em;
+    color: #555;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #000;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #000;
+}
+
+.border {
+    border-radius: unset !important;
+    border-style: solid !important;
+    border-width: medium !important;
+    border-color: #000 !important;
+}
+
 .breadcrumb {
     display: -ms-flexbox;
     display: flex;
@@ -108,8 +203,6 @@ ul.posts li {
     margin-bottom: 1rem;
     list-style: none;
     background-color: #ffffff;
-    border-style: solid;
-    border-width: medium;
 }
 
 
