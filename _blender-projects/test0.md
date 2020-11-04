@@ -40,6 +40,8 @@ a
 a
 a</code></pre>
 
+This is a wonderfull piece of code written in JS to test the codeblock.
+
 <style>
 .fill {object-fit: fill;}
 .contain {object-fit: contain;}
