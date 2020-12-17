@@ -192,6 +192,7 @@ p.array {
     border-style: solid !important;
     border-width: medium !important;
     border-color: #000 !important;
+    box-shadow: 5px 5px 0px 0px !important;
 }
 
 .breadcrumb {
