@@ -2,7 +2,7 @@
 layout: post
 title: "Red Lines"
 date: 2020-04-17
-img: "/recources/redLinesImage2.png"
+img: "/recources/blender-images/red_lines.png"
 ---
 
 <img src="{{page.img}}" alt="drawing"/>

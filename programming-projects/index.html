@@ -5,7 +5,8 @@ title: Moritz Blog
 <h1>{{ page.title }}</h1>
 <p>Here you can see my bolg, where I post the more interesting stuff I do as a hobby programmer.</p>
 <ul class="array">
-    {% for project in site.programming-projects %}
+    {% assign programming-projects = site.programming-projects | sort: 'date' | reverse %}
+    {% for project in programming-projects %}
     <li class="array" onclick="location.href='{{ project.url }}'">
         <h3 class="array">{{ project.title }}</h3>
         <p class="array"">{{ project.date | date_to_string }}</p>

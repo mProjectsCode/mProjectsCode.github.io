@@ -5,7 +5,8 @@ title: Moritz Blender Projects
 <h1>{{ page.title }}</h1>
 <p>Here you can see some of my better <a href="https:\\www.blender.org">Blender</a> projects.</p>
 <ul class="array">
-    {% for project in site.blender-projects %}
+    {% assign blender-projects = site.blender-projects | sort: 'date' | reverse %}
+    {% for project in blender-projects %}
     <li class="array" onclick="location.href='{{ project.url }}'">
         <img class="array" src="{{ project.img}}" alt="">
         <h3 class="array">{{ project.title }}</h3>

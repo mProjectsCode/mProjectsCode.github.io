@@ -2,7 +2,7 @@
 layout: post
 title: "Crystals"
 date: 2020-04-17
-img: "/recources/crystals.png"
+img: "/recources/blender-images/crystals.png"
 ---
 
 <img src="{{page.img}}" alt="drawing"/>
