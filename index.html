@@ -2,9 +2,64 @@
 layout: default
 title: Moritz Jung
 ---
-<div class="blurb">
+
+{% assign querry1 = site.art-projects | where: "title","Mandelbulb" %}
+{% assign project1 = querry1[0] %}
+{% assign querry2 = site.art-projects | where: "title","Red Lines" %}
+{% assign project2 = querry2[0] %}
+{% assign querry3 = site.art-projects | where: "title","White Lines" %}
+{% assign project3 = querry3[0] %}
+{% assign querry4 = site.art-projects | where: "title","Julia 3D" %}
+{% assign project4 = querry4[0] %}
+
+<div>
+	<h1 style="text-align: center;">My Work</h1><br><br>
+
+	<!-- Slideshow container -->
+	<div class="slideshow-container">
+		<ul class="array slide-content">
+			<li class="array slide" id="slide-1" onclick="location.href='{{ project1.url }}'">
+				<img src="{{ project1.img }}" class="array">
+				<h3 class="array">{{ project1.title }}</h3>
+			</li>
+
+			<li class="array slide" id="slide-2" onclick="location.href='{{ project2.url }}'">
+				<img src="{{ project2.img }}" class="array">
+				<h3 class="array">{{ project2.title }}</h3>
+			</li>
+		
+			<li class="array slide" id="slide-3" onclick="location.href='{{ project3.url }}'">
+				<img src="{{ project3.img }}" class="array">
+				<h3 class="array">{{ project3.title }}</h3>
+			</li>
+
+			<li class="array slide" id="slide-4" onclick="location.href='{{ project4.url }}'">
+				<img src="{{ project4.img }}" class="array">
+				<h3 class="array">{{ project4.title }}</h3>
+			</li>
+		</ul>
+
+		<div style="padding: 10px;">
+			<div class="sidebar">
+				<div onclick="showSlide('1')" alt="" class="slide-selector" id="slide-selector-1">
+					<img src="{{ project1.img }}" style="width:100%; height: inherit;">
+				</div>
+				<div onclick="showSlide('2')" alt="" class="slide-selector" id="slide-selector-2">
+					<img src="{{ project2.img }}" style="width:100%; height: inherit;">
+				</div>
+				<div onclick="showSlide('3')" alt="" class="slide-selector" id="slide-selector-3">
+					<img src="{{ project3.img }}" style="width:100%; height: inherit;">
+				</div>
+				<div onclick="showSlide('4')" alt="" class="slide-selector" id="slide-selector-4">
+					<img src="{{ project4.img }}" style="width:100%; height: inherit;">
+				</div>
+			</div>
+		</div>
+	</div>
+	<br>
+
 	<h2>Hi there, I'm Moritz Jung!</h2>
-	<p>This is ma personal website. I am a free time programmer and artist.<br> 
+	<p>This is my personal website. I am a free time programmer and artist.<br> 
 		Most of my Projects are written in: <br>
 		 - C# <br>
 		 - Java <br>
@@ -12,4 +67,45 @@ title: Moritz Jung
 		 - Python <br>
 	</p>
 
-</div><!-- /.blurb -->
+</div>
+
+<script>
+	let currentSlide = 0
+	let numberOfSlides = 4
+
+	let interval = setInterval(stepSlide, 2000)
+	stepSlide(currentSlide)
+
+	function stepSlide()
+	{
+		if (currentSlide + 1 <= numberOfSlides) currentSlide++
+		else currentSlide = 1
+		showSlide(currentSlide, false)
+	}
+
+	function showSlide(id, isManual = true)
+	{
+		// Disable Auto Slideshow
+		if (isManual)
+		{
+			clearInterval(interval)
+		}
+
+		let slide = document.getElementById('slide-'+id)
+		let slideSelector = document.getElementById('slide-selector-'+id)
+
+		let allSlides = document.querySelectorAll('.slide.active, .slide-selector.active')
+
+		allSlides.forEach(e => {
+			console.log(e)
+			e.classList.remove('active')
+		})
+
+		try
+		{
+			slide.classList.add('active')
+			slideSelector.classList.add('active')	
+		}
+		catch (e) {}
+	}
+</script>

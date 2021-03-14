@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "White Lines"
+title: "Crystal Palace"
 date: 2020-04-17
-img: "/recources/blender-images/white_lines.png"
+img: "/recources/art-images/crystal_palace_red.png"
 ---
 
 <img src="{{page.img}}" alt="drawing"/>

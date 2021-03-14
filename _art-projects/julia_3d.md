@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "Red Lines"
+title: "Julia 3D"
 date: 2020-04-17
-img: "/recources/blender-images/red_lines.png"
+img: "/recources/art-images/julia_3d.png"
 ---
 
 <img src="{{page.img}}" alt="drawing"/>

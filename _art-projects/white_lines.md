@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "Hexagons"
-date: 2020-04-14
-img: "/recources/blender-images/floating_hexagons.png"
+title: "White Lines"
+date: 2020-04-17
+img: "/recources/art-images/white_lines.png"
 ---
 
 <img src="{{page.img}}" alt="drawing"/>

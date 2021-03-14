@@ -2,7 +2,7 @@ body {
     margin: 60px auto;
     width: 95%;
 }
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 1100px) {
     body {
         margin: 60px auto;
         width: 60%;
@@ -195,6 +195,13 @@ p.array {
     box-shadow: 5px 5px 0px 0px !important;
 }
 
+.border-no-shadow {
+    border-radius: unset !important;
+    border-style: solid !important;
+    border-width: medium !important;
+    border-color: #000 !important;
+}
+
 .breadcrumb {
     display: -ms-flexbox;
     display: flex;
@@ -208,3 +215,89 @@ p.array {
 }
 
 
+
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+    position: relative;
+    margin: auto;
+    display: flex;
+    gap: 10px;
+    height: 500px;
+}
+
+.slide-content {
+    flex: 1;
+    position: relative;
+}
+
+.slide-content .slide {
+    width: 100%;
+    display: flex;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    flex-direction: column;
+    transition: opacity 500ms;
+}
+
+.slide-content .slide img.array {
+    flex: 1;
+    height: calc(100% - 48px);
+    width: 100%;
+    object-fit: cover;
+}
+
+.slide-content .slide h3.array {
+    width: 100%;
+}
+
+.slide-content .slide.active {
+    opacity: 1;
+    z-index: 100;
+}
+
+.sidebar {
+    height: 100%;
+    overflow-y: auto;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.sidebar .slide-selector {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    padding: 5px;
+    transition: box-shadow 500ms;
+}
+
+.sidebar .slide-selector.active {
+    padding: 2px;
+    border-radius: unset !important;
+    border-style: solid !important;
+    border-width: medium !important;
+}
+
+@media screen and (max-width: 1100px) {
+    .slideshow-container {
+        flex-direction: column;
+    }
+    
+    .sidebar {
+        height: auto;
+        width: 100%;
+        flex-direction: row;
+    }
+
+    .sidebar .slide-selector {
+        width: 180px;
+    }
+}

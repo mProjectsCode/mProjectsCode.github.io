@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "Crystal Palace"
+title: "Mandelbulb"
 date: 2020-04-17
-img: "/recources/blender-images/crystal_palace_red.png"
+img: "/recources/art-images/mandelbulb.png"
 ---
 
 <img src="{{page.img}}" alt="drawing"/>
