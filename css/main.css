@@ -266,9 +266,8 @@ p.array {
     width: 250px;
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    padding-left: 8px;
-    padding-right: 8px;
+    gap: 0px;
+    padding: 0px 5px 0px 5px;
 }
 
 .sidebar .slide-selector {
@@ -292,9 +291,10 @@ p.array {
     }
     
     .sidebar {
-        height: auto;
+        height: 100%;
         width: 100%;
         flex-direction: row;
+        padding: 0px;
     }
 
     .sidebar .slide-selector {
