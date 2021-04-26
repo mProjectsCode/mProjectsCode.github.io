@@ -262,7 +262,7 @@ p.array {
 
 .sidebar {
     height: 100%;
-    
+    overflow-y: auto;
     width: 250px;
     display: flex;
     flex-direction: column;
