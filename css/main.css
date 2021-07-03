@@ -241,7 +241,7 @@ p.array {
     left: 0;
     height: 100%;
     flex-direction: column;
-    transition: opacity 500ms;
+    transition: opacity 1000ms;
 }
 
 .slide-content .slide img.array {
