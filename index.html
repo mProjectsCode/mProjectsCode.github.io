@@ -12,6 +12,8 @@ title: Moritz Jung
 {% assign querry4 = site.art-projects | where: "title","Julia 3D" %}
 {% assign project4 = querry4[0] %}
 
+{% assign programming-projects = site.programming-projects | sort: 'date' | reverse %}
+
 <div>
 	<h1>My Work</h1>
 	<p>This is the stuff I do.</p>
@@ -67,6 +69,18 @@ title: Moritz Jung
 		 - Python <br>
 	</p>
 
+	<h3>My latest Blog posts</h3>
+
+	<ul class="array">
+		{% for project in programming-projects limit:2 %}
+		<li class="array" onclick="location.href='{{ project.url }}'">
+			<img class="array" src="{{ project.img }}" alt="">
+			<h3 class="array">{{ project.title }}</h3>
+			<p class="array">{{ project.date | date_to_string }}</p>
+		</li>
+		<br>
+		{% endfor %}
+	</ul>
 </div>
 
 <script>
