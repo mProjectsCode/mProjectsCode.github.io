@@ -36,4 +36,4 @@ a
 a
 a</code></pre>
 
-This is a wonderfull piece of code written in JS to test the codeblock.
+This is a wonderful piece of code written in JS to test the code block.

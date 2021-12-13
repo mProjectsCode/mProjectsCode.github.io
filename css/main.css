@@ -272,7 +272,7 @@ p.array {
 
 .sidebar .slide-selector {
     width: 100%;
-    height: 100%;
+    height: 130px;
     cursor: pointer;
     padding: 5px;
     transition: box-shadow 500ms;
@@ -299,5 +299,7 @@ p.array {
 
     .sidebar .slide-selector {
         width: 180px;
+        flex: none;
+        margin-bottom: 5px;
     }
 }

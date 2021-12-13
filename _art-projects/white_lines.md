@@ -2,7 +2,8 @@
 layout: post
 title: "White Lines"
 date: 2020-04-17
-img: "/recources/art-images/white_lines.png"
+img: "/recources/art-images/white_lines/white_lines_1920x1080.png"
+imgLowRes: "/recources/art-images/white_lines/white_lines_640x360.png"
 ---
 
 <img src="{{page.img}}" alt="drawing"/>

@@ -5,7 +5,7 @@ title: Moritz Jung
 
 {% assign querry1 = site.art-projects | where: "title","Mandelbulb" %}
 {% assign project1 = querry1[0] %}
-{% assign querry2 = site.art-projects | where: "title","Red Lines" %}
+{% assign querry2 = site.art-projects | where: "title","Crystal Pillars" %}
 {% assign project2 = querry2[0] %}
 {% assign querry3 = site.art-projects | where: "title","White Lines" %}
 {% assign project3 = querry3[0] %}
@@ -21,22 +21,22 @@ title: Moritz Jung
 	<div class="slideshow-container">
 		<ul class="array slide-content">
 			<li class="array slide" id="slide-1" onclick="location.href='{{ project1.url }}'">
-				<img src="{{ project1.img }}" class="array">
+				<img src="{{ project1.img }}" alt="{{ project1.title }}" class="array">
 				<h3 class="array">{{ project1.title }}</h3>
 			</li>
 
 			<li class="array slide" id="slide-2" onclick="location.href='{{ project2.url }}'">
-				<img src="{{ project2.img }}" class="array">
+				<img src="{{ project2.img }}" alt="{{ project2.title }}" class="array">
 				<h3 class="array">{{ project2.title }}</h3>
 			</li>
 		
 			<li class="array slide" id="slide-3" onclick="location.href='{{ project3.url }}'">
-				<img src="{{ project3.img }}" class="array">
+				<img src="{{ project3.img }}" alt="{{ project3.title }}" class="array">
 				<h3 class="array">{{ project3.title }}</h3>
 			</li>
 
 			<li class="array slide" id="slide-4" onclick="location.href='{{ project4.url }}'">
-				<img src="{{ project4.img }}" class="array">
+				<img src="{{ project4.img }}" alt="{{ project4.title }}" class="array">
 				<h3 class="array">{{ project4.title }}</h3>
 			</li>
 		</ul>
@@ -44,16 +44,16 @@ title: Moritz Jung
 		<div style="padding: 10px;">
 			<div class="sidebar">
 				<div onclick="showSlide('1')" alt="" class="slide-selector" id="slide-selector-1">
-					<img src="{{ project1.img }}" style="width:100%; height: inherit;">
+					<img src="{{ project1.imgLowRes }}" alt="{{ project1.title }}" style="height:100%; width: 100%; object-fit: cover;">
 				</div>
 				<div onclick="showSlide('2')" alt="" class="slide-selector" id="slide-selector-2">
-					<img src="{{ project2.img }}" style="width:100%; height: inherit;">
+					<img src="{{ project2.imgLowRes }}" alt="{{ project2.title }}" style="height:100%; width: 100%; object-fit: cover;">
 				</div>
 				<div onclick="showSlide('3')" alt="" class="slide-selector" id="slide-selector-3">
-					<img src="{{ project3.img }}" style="width:100%; height: inherit;">
+					<img src="{{ project3.imgLowRes }}" alt="{{ project3.title }}" style="height:100%; width: 100%; object-fit: cover;">
 				</div>
 				<div onclick="showSlide('4')" alt="" class="slide-selector" id="slide-selector-4">
-					<img src="{{ project4.img }}" style="width:100%; height: inherit;">
+					<img src="{{ project4.imgLowRes }}" alt="{{ project4.title }}" style="height:100%; width: 100%; object-fit: cover;">
 				</div>
 			</div>
 		</div>
@@ -69,10 +69,10 @@ title: Moritz Jung
 		 - Python <br>
 	</p>
 
-	<h3>My latest Blog posts</h3>
+	<h3>Check out my latest <a href="/programming-projects" style="color: black;">Blog</a> posts</h3>
 
 	<ul class="array">
-		{% for project in programming-projects limit:2 %}
+		{% for project in programming-projects limit:3 %}
 		<li class="array" onclick="location.href='{{ project.url }}'">
 			<img class="array" src="{{ project.img }}" alt="">
 			<h3 class="array">{{ project.title }}</h3>
@@ -92,8 +92,7 @@ title: Moritz Jung
 
 	function stepSlide()
 	{
-		if (currentSlide + 1 <= numberOfSlides) currentSlide++
-		else currentSlide = 1
+		currentSlide = currentSlide % numberOfSlides + 1
 		showSlide(currentSlide, false)
 	}
 
@@ -111,7 +110,7 @@ title: Moritz Jung
 		let allSlides = document.querySelectorAll('.slide.active, .slide-selector.active')
 
 		allSlides.forEach(e => {
-			console.log(e)
+			//console.log(e)
 			e.classList.remove('active')
 		})
 
