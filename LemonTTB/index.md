@@ -1,0 +1,30 @@
+---
+layout: default
+title: LemonTTB
+---
+<h1>LemonTTB</h1>
+
+LemonTTB is a discord bot created to assist me and other dungeon masters to run their online tabletop sessions.
+
+#### The bot currently has these features
+<ul class="dash">
+    <li>A web interface</li>
+    <li>Play local mp3 files</li>
+    <li>Play music from youtube videos</li>
+    <li>Quickly deaf-mute players</li>
+    <li>Move players to a secondary tips voice channel</li>
+</ul>
+
+#### Planned features
+<ul class="dash">
+    <li>Reference online wikis such as d20pfsrd, dndbeyond</li>
+    <li>Reference files that the DM creates (such as session logs)</li>
+</ul>
+
+#### Installation
+<ul class="dash">
+    <li>clone the repo from <a href="https://github.com/mProjectsCode/LemonTTB">here</a></li>
+    <li>run the "bootRun" gradle task</li>
+    <li>the web interface will start on port 8080</li>
+    <li>open localhost:8080 in your browser and start the bot from there</li>
+</ul>
