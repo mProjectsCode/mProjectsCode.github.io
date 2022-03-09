@@ -11,6 +11,8 @@ title: Moritz Jung
 {% assign project3 = querry3[0] %}
 {% assign querry4 = site.art-projects | where: "title","Julia 3D" %}
 {% assign project4 = querry4[0] %}
+{% assign querry5 = site.art-projects | where: "title","Vase" %}
+{% assign project5 = querry5[0] %}
 
 {% assign programming-projects = site.programming-projects | sort: 'date' | reverse %}
 
@@ -29,7 +31,7 @@ title: Moritz Jung
 				<img src="{{ project2.img }}" alt="{{ project2.title }}" class="array">
 				<h3 class="array">{{ project2.title }}</h3>
 			</li>
-		
+
 			<li class="array slide" id="slide-3" onclick="location.href='{{ project3.url }}'">
 				<img src="{{ project3.img }}" alt="{{ project3.title }}" class="array">
 				<h3 class="array">{{ project3.title }}</h3>
@@ -38,6 +40,11 @@ title: Moritz Jung
 			<li class="array slide" id="slide-4" onclick="location.href='{{ project4.url }}'">
 				<img src="{{ project4.img }}" alt="{{ project4.title }}" class="array">
 				<h3 class="array">{{ project4.title }}</h3>
+			</li>
+
+			<li class="array slide" id="slide-5" onclick="location.href='{{ project5.url }}'">
+				<img src="{{ project5.img }}" alt="{{ project5.title }}" class="array">
+				<h3 class="array">{{ project5.title }}</h3>
 			</li>
 		</ul>
 
@@ -55,18 +62,21 @@ title: Moritz Jung
 				<div onclick="showSlide('4')" alt="" class="slide-selector" id="slide-selector-4">
 					<img src="{{ project4.imgLowRes }}" alt="{{ project4.title }}" style="height:100%; width: 100%; object-fit: cover;">
 				</div>
+				<div onclick="showSlide('5')" alt="" class="slide-selector" id="slide-selector-5">
+					<img src="{{ project5.imgLowRes }}" alt="{{ project5.title }}" style="height:100%; width: 100%; object-fit: cover;">
+				</div>
 			</div>
 		</div>
 	</div>
 	<br>
 
 	<h2>Hi there, I'm Moritz Jung!</h2>
-	<p>This is my personal website. I am a free time programmer and artist.<br> 
+	<p>This is my personal website. I am a free time programmer and artist.<br>
 		Most of my Projects are written in: <br>
-		 - C# <br>
-		 - Java <br>
-		 - Javascript <br>
-		 - Python <br>
+		- C# <br>
+		- Java <br>
+		- Javascript <br>
+		- Python <br>
 	</p>
 
 	<h3>Check out my latest <a href="/programming-projects" style="color: black;">Blog</a> posts</h3>
@@ -85,27 +95,24 @@ title: Moritz Jung
 
 <script>
 	let currentSlide = 0
-	let numberOfSlides = 4
+	let numberOfSlides = 5
 
 	let interval = setInterval(stepSlide, 2000)
 	stepSlide(currentSlide)
 
-	function stepSlide()
-	{
+	function stepSlide() {
 		currentSlide = currentSlide % numberOfSlides + 1
 		showSlide(currentSlide, false)
 	}
 
-	function showSlide(id, isManual = true)
-	{
+	function showSlide(id, isManual = true) {
 		// Disable Auto Slideshow
-		if (isManual)
-		{
+		if (isManual) {
 			clearInterval(interval)
 		}
 
-		let slide = document.getElementById('slide-'+id)
-		let slideSelector = document.getElementById('slide-selector-'+id)
+		let slide = document.getElementById('slide-' + id)
+		let slideSelector = document.getElementById('slide-selector-' + id)
 
 		let allSlides = document.querySelectorAll('.slide.active, .slide-selector.active')
 
@@ -114,11 +121,10 @@ title: Moritz Jung
 			e.classList.remove('active')
 		})
 
-		try
-		{
+		try {
 			slide.classList.add('active')
-			slideSelector.classList.add('active')	
+			slideSelector.classList.add('active')
 		}
-		catch (e) {}
+		catch (e) { }
 	}
 </script>
