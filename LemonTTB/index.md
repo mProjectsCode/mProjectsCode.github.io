@@ -3,6 +3,11 @@ layout: default
 title: LemonTTB
 ---
 <h1>LemonTTB</h1>
+[![GitHub license](https://badgen.net/github/license/mProjectsCode/LemonTTB)](https://github.com/mProjectsCode/LemonTTB/LICENSE)
+[![GitHub commits](https://badgen.net/github/commits/mProjectsCode/LemonTTB)](https://github.com/mProjectsCode/LemonTTB/commit)
+[![GitHub latest commit](https://badgen.net/github/last-commit/mProjectsCode/LemonTTB)](https://GitHub.com/mProjectsCode/LemonTTB/commit/)
+[![GitHub release](https://badgen.net/github/release/mProjectsCode/LemonTTB)](https://github.com/mProjectsCode/LemonTTB/releases)
+[![Github all releases](https://img.shields.io/github/downloads/mProjectsCode/LemonTTB/total.svg)](https://github.com/mProjectsCode/LemonTTB/releases/)
 
 LemonTTB is a discord bot created to assist me and other dungeon masters to run their online tabletop sessions.
 
