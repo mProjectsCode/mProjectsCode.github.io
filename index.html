@@ -17,58 +17,58 @@ title: Moritz Jung
 {% assign programming-projects = site.programming-projects | sort: 'date' | reverse %}
 
 <div>
-	<h1>My Work</h1>
-	<p>This is the stuff I do.</p>
-	<!-- Slideshow container -->
-	<div class="slideshow-container">
-		<ul class="array slide-content">
-			<li class="array slide" id="slide-1" onclick="location.href='{{ project1.url }}'">
-				<img src="{{ project1.img }}" alt="{{ project1.title }}" class="array">
-				<h3 class="array">{{ project1.title }}</h3>
-			</li>
+    <h1>My Work</h1>
+    <p>This is the stuff I do.</p>
+    <!-- Slideshow container -->
+    <div class="slideshow-container">
+        <div class="array-wrapper slide-content">
+            <div class="array-element slide" id="slide-1" onclick="location.href='{{ project1.url }}'">
+                <img src="{{ project1.img }}" alt="{{ project1.title }}" class="array-element-image">
+                <h3 class="array-element-heading">{{ project1.title }}</h3>
+            </div>
 
-			<li class="array slide" id="slide-2" onclick="location.href='{{ project2.url }}'">
-				<img src="{{ project2.img }}" alt="{{ project2.title }}" class="array">
-				<h3 class="array">{{ project2.title }}</h3>
-			</li>
+            <div class="array-element slide" id="slide-2" onclick="location.href='{{ project2.url }}'">
+                <img src="{{ project2.img }}" alt="{{ project2.title }}" class="array-element-image">
+                <h3 class="array-element-heading">{{ project2.title }}</h3>
+            </div>
 
-			<li class="array slide" id="slide-3" onclick="location.href='{{ project3.url }}'">
-				<img src="{{ project3.img }}" alt="{{ project3.title }}" class="array">
-				<h3 class="array">{{ project3.title }}</h3>
-			</li>
+            <div class="array-element slide" id="slide-3" onclick="location.href='{{ project3.url }}'">
+                <img src="{{ project3.img }}" alt="{{ project3.title }}" class="array-element-image">
+                <h3 class="array-element-heading">{{ project3.title }}</h3>
+            </div>
 
-			<li class="array slide" id="slide-4" onclick="location.href='{{ project4.url }}'">
-				<img src="{{ project4.img }}" alt="{{ project4.title }}" class="array">
-				<h3 class="array">{{ project4.title }}</h3>
-			</li>
+            <div class="array-element slide" id="slide-4" onclick="location.href='{{ project4.url }}'">
+                <img src="{{ project4.img }}" alt="{{ project4.title }}" class="array-element-image">
+                <h3 class="array-element-heading">{{ project4.title }}</h3>
+            </div>
 
-			<li class="array slide" id="slide-5" onclick="location.href='{{ project5.url }}'">
-				<img src="{{ project5.img }}" alt="{{ project5.title }}" class="array">
-				<h3 class="array">{{ project5.title }}</h3>
-			</li>
-		</ul>
+            <div class="array-element slide" id="slide-5" onclick="location.href='{{ project5.url }}'">
+                <img src="{{ project5.img }}" alt="{{ project5.title }}" class="array-element-image">
+                <h3 class="array-element-heading">{{ project5.title }}</h3>
+            </div>
+        </div>
 
-		<div style="padding: 10px;">
-			<div class="sidebar">
-				<div onclick="showSlide('1')" alt="" class="slide-selector" id="slide-selector-1">
-					<img src="{{ project1.imgLowRes }}" alt="{{ project1.title }}" style="height:100%; width: 100%; object-fit: cover;">
-				</div>
-				<div onclick="showSlide('2')" alt="" class="slide-selector" id="slide-selector-2">
-					<img src="{{ project2.imgLowRes }}" alt="{{ project2.title }}" style="height:100%; width: 100%; object-fit: cover;">
-				</div>
-				<div onclick="showSlide('3')" alt="" class="slide-selector" id="slide-selector-3">
-					<img src="{{ project3.imgLowRes }}" alt="{{ project3.title }}" style="height:100%; width: 100%; object-fit: cover;">
-				</div>
-				<div onclick="showSlide('4')" alt="" class="slide-selector" id="slide-selector-4">
-					<img src="{{ project4.imgLowRes }}" alt="{{ project4.title }}" style="height:100%; width: 100%; object-fit: cover;">
-				</div>
-				<div onclick="showSlide('5')" alt="" class="slide-selector" id="slide-selector-5">
-					<img src="{{ project5.imgLowRes }}" alt="{{ project5.title }}" style="height:100%; width: 100%; object-fit: cover;">
-				</div>
-			</div>
-		</div>
-	</div>
-	<br>
+        <div style="padding: 10px;">
+            <div class="sidebar">
+                <div onclick="showSlide('1')" alt="" class="slide-selector" id="slide-selector-1">
+                    <img src="{{ project1.imgLowRes }}" alt="{{ project1.title }}" style="height:100%; width: 100%; object-fit: cover;">
+                </div>
+                <div onclick="showSlide('2')" alt="" class="slide-selector" id="slide-selector-2">
+                    <img src="{{ project2.imgLowRes }}" alt="{{ project2.title }}" style="height:100%; width: 100%; object-fit: cover;">
+                </div>
+                <div onclick="showSlide('3')" alt="" class="slide-selector" id="slide-selector-3">
+                    <img src="{{ project3.imgLowRes }}" alt="{{ project3.title }}" style="height:100%; width: 100%; object-fit: cover;">
+                </div>
+                <div onclick="showSlide('4')" alt="" class="slide-selector" id="slide-selector-4">
+                    <img src="{{ project4.imgLowRes }}" alt="{{ project4.title }}" style="height:100%; width: 100%; object-fit: cover;">
+                </div>
+                <div onclick="showSlide('5')" alt="" class="slide-selector" id="slide-selector-5">
+                    <img src="{{ project5.imgLowRes }}" alt="{{ project5.title }}" style="height:100%; width: 100%; object-fit: cover;">
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
 
 	<h2>Hi there, I'm Moritz Jung!</h2>
 	<p>This is my personal website. I am a free time programmer and artist.<br>
@@ -79,52 +79,52 @@ title: Moritz Jung
 		- Python <br>
 	</p>
 
-	<h3>Check out my latest <a href="/programming-projects" style="color: black;">Blog</a> posts</h3>
+    <h3>Check out my latest <a href="/programming-projects" style="color: black;">Blog</a> posts</h3>
 
-	<ul class="array">
-		{% for project in programming-projects limit:3 %}
-		<li class="array" onclick="location.href='{{ project.url }}'">
-			<img class="array" src="{{ project.img }}" alt="">
-			<h3 class="array">{{ project.title }}</h3>
-			<p class="array">{{ project.date | date_to_string }}</p>
-		</li>
-		<br>
-		{% endfor %}
-	</ul>
+    <div class="array-wrapper">
+        {% for project in programming-projects limit:3 %}
+        <a class="array-link" href="{{ project.url }}">
+            <div class="array-element">
+                <img class="array-element-image" src="{{ project.img }}" alt="">
+                <h3 class="array-element-heading">{{ project.title }}</h3>
+                <p class="array-element-text">{{ project.date | date_to_string }}</p>
+            </div>
+        </a>
+        {% endfor %}
+    </div>
 </div>
 
 <script>
-	let currentSlide = 0
-	let numberOfSlides = 5
+    let currentSlide = 0;
+    let numberOfSlides = 5;
 
-	let interval = setInterval(stepSlide, 2000)
-	stepSlide(currentSlide)
+    let interval = setInterval(stepSlide, 2000);
+    stepSlide(currentSlide);
 
-	function stepSlide() {
-		currentSlide = currentSlide % numberOfSlides + 1
-		showSlide(currentSlide, false)
-	}
+    function stepSlide() {
+        currentSlide = currentSlide % numberOfSlides + 1;
+        showSlide(currentSlide, false);
+    }
 
-	function showSlide(id, isManual = true) {
-		// Disable Auto Slideshow
-		if (isManual) {
-			clearInterval(interval)
-		}
+    function showSlide(id, isManual = true) {
+        // Disable Auto Slideshow
+        if (isManual) {
+            clearInterval(interval);
+        }
 
-		let slide = document.getElementById('slide-' + id)
-		let slideSelector = document.getElementById('slide-selector-' + id)
+        let slide = document.getElementById('slide-' + id);
+        let slideSelector = document.getElementById('slide-selector-' + id);
 
-		let allSlides = document.querySelectorAll('.slide.active, .slide-selector.active')
+        let allSlides = document.querySelectorAll('.slide.active, .slide-selector.active');
 
-		allSlides.forEach(e => {
-			//console.log(e)
-			e.classList.remove('active')
-		})
+        allSlides.forEach(e => {
+            //console.log(e)
+            e.classList.remove('active');
+        });
 
-		try {
-			slide.classList.add('active')
-			slideSelector.classList.add('active')
-		}
-		catch (e) { }
-	}
+        try {
+            slide.classList.add('active');
+            slideSelector.classList.add('active');
+        } catch (e) {}
+    }
 </script>

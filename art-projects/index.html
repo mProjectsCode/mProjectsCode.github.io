@@ -4,19 +4,20 @@ title: My Artwork
 ---
 <h1>{{ page.title }}</h1>
 <p>Here you can see some of my artwork. <br> Tools I use include: <a href="https:\\www.blender.org">Blender</a>, <a href="https://www.gimp.org/">GIMP</a> and my own Fractal Rendering Engine.</p>
-<ul class="array">
+<div class="array-wrapper">
     {% assign art-projects = site.art-projects | sort: 'date' | reverse %}
     {% for project in art-projects %}
-    <li class="array" onclick="location.href='{{ project.url }}'">
-        <div style="width: 100%; padding-top: 56.25%; position: relative;">
-            <img class="array" src="{{ project.img }}" alt="" style="height: 100%; width: 100%; object-fit: cover; position: absolute; top: 0; left: 0;">
+    <a class="array-link" href="{{ project.url }}">
+        <div class="array-element">
+            <div style="width: 100%; padding-top: 56.25%; position: relative;">
+                <img class="array-element-image" src="{{ project.img }}" alt="" style="height: 100%; width: 100%; object-fit: cover; position: absolute; top: 0; left: 0;">
+            </div>
+            <h3 class="array-element-heading">{{ project.title }}</h3>
+            <p class="array-element-text">{{ project.date | date_to_string }}</p>
         </div>
-        <h3 class="array">{{ project.title }}</h3>
-        <p class="array">{{ project.date | date_to_string }}</p>
-    </li>
-    <br>
+    </a>
     {% endfor %}
-</ul>
+</div>
 
 <style>
 
