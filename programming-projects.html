@@ -8,11 +8,14 @@ title: My Blog
     {% assign programming-projects = site.programming-projects | sort: 'date' | reverse %}
     {% for project in programming-projects %}
     <a class="array-link" href="{{ project.url }}">
-        <div class="array-element">
-            <img class="array-element-image" src="{{ project.img }}" alt="">
+        <div class="array-element border-hover">
+            {% if project.img %}
+            <div class="array-element-image-wrapper">
+                <img class="array-element-image" src="{{ project.img }}" alt="">
+            </div>
+            {% endif %}
             <h3 class="array-element-heading">{{ project.title }}</h3>
             <p class="array-element-text">{{ project.date | date_to_string }}</p>
         </div>
     </a>
-    {% endfor %}
-</div>
+    {% endfor %}</div>

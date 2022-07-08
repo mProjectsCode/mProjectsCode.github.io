@@ -16,39 +16,42 @@ title: Moritz Jung
 
 {% assign programming-projects = site.programming-projects | sort: 'date' | reverse %}
 
-<div>
-    <h1>My Work</h1>
-    <p>This is the stuff I do.</p>
-    <!-- Slideshow container -->
-    <div class="slideshow-container">
-        <div class="array-wrapper slide-content">
-            <div class="array-element slide" id="slide-1" onclick="location.href='{{ project1.url }}'">
-                <img src="{{ project1.img }}" alt="{{ project1.title }}" class="array-element-image">
-                <h3 class="array-element-heading">{{ project1.title }}</h3>
-            </div>
 
-            <div class="array-element slide" id="slide-2" onclick="location.href='{{ project2.url }}'">
-                <img src="{{ project2.img }}" alt="{{ project2.title }}" class="array-element-image">
-                <h3 class="array-element-heading">{{ project2.title }}</h3>
-            </div>
-
-            <div class="array-element slide" id="slide-3" onclick="location.href='{{ project3.url }}'">
-                <img src="{{ project3.img }}" alt="{{ project3.title }}" class="array-element-image">
-                <h3 class="array-element-heading">{{ project3.title }}</h3>
-            </div>
-
-            <div class="array-element slide" id="slide-4" onclick="location.href='{{ project4.url }}'">
-                <img src="{{ project4.img }}" alt="{{ project4.title }}" class="array-element-image">
-                <h3 class="array-element-heading">{{ project4.title }}</h3>
-            </div>
-
-            <div class="array-element slide" id="slide-5" onclick="location.href='{{ project5.url }}'">
-                <img src="{{ project5.img }}" alt="{{ project5.title }}" class="array-element-image">
-                <h3 class="array-element-heading">{{ project5.title }}</h3>
-            </div>
+<h1>Hello there, I'm Moritz Jung!</h1>
+<i>General Kenobi!</i>
+<p>
+    Jokes aside, I am a hobby software engineer and artist, and these are some of my projects.
+</p>
+<!-- Slideshow container -->
+<div class="slideshow-container">
+    <div class="array-wrapper slide-content">
+        <div class="array-element slide border-hover" id="slide-1" onclick="location.href='{{ project1.url }}'">
+            <img class="slide-image" src="{{ project1.img }}" alt="{{ project1.title }}">
+            <h3 class="array-element-heading">{{ project1.title }}</h3>
         </div>
 
-        <div style="padding: 10px;">
+        <div class="array-element slide border-hover" id="slide-2" onclick="location.href='{{ project2.url }}'">
+            <img class="slide-image" src="{{ project2.img }}" alt="{{ project2.title }}">
+            <h3 class="array-element-heading">{{ project2.title }}</h3>
+        </div>
+
+        <div class="array-element slide border-hover" id="slide-3" onclick="location.href='{{ project3.url }}'">
+            <img class="slide-image" src="{{ project3.img }}" alt="{{ project3.title }}">
+            <h3 class="array-element-heading">{{ project3.title }}</h3>
+        </div>
+
+        <div class="array-element slide border-hover" id="slide-4" onclick="location.href='{{ project4.url }}'">
+            <img class="slide-image" src="{{ project4.img }}" alt="{{ project4.title }}">
+            <h3 class="array-element-heading">{{ project4.title }}</h3>
+        </div>
+
+        <div class="array-element slide border-hover" id="slide-5" onclick="location.href='{{ project5.url }}'">
+            <img class="slide-image" src="{{ project5.img }}" alt="{{ project5.title }}">
+            <h3 class="array-element-heading">{{ project5.title }}</h3>
+        </div>
+    </div>
+
+        <div style="">
             <div class="sidebar">
                 <div onclick="showSlide('1')" alt="" class="slide-selector" id="slide-selector-1">
                     <img src="{{ project1.imgLowRes }}" alt="{{ project1.title }}" style="height:100%; width: 100%; object-fit: cover;">
@@ -70,29 +73,47 @@ title: Moritz Jung
     </div>
     <br>
 
-	<h2>Hi there, I'm Moritz Jung!</h2>
-	<p>This is my personal website. I am a free time programmer and artist.<br>
-		Most of my Projects are written in: <br>
-		- C# <br>
-		- Java <br>
-		- Javascript <br>
-		- Python <br>
-	</p>
+<h2>About myself</h2>
+<p>
+    Over the years I have used a variety of programming languages. These include
+</p>
+<ul class="dash">
+    <li>Typescript/Javascript</li>
+    <li>C#</li>
+    <li>Java</li>
+    <li>C++</li>
+    <li>Python</li>
+</ul>
 
-    <h3>Check out my latest <a href="/programming-projects" style="color: black;">Blog</a> posts</h3>
+<p>
+    I have also used a variety of technologies and frameworks such as
+</p>
+<ul class="dash">
+    <li>ASP.NET core</li>
+    <li>Spring Boot</li>
+    <li>NodeJs</li>
+    <li>Vue</li>
+    <li>Svelte</li>
+</ul>
 
-    <div class="array-wrapper">
-        {% for project in programming-projects limit:3 %}
-        <a class="array-link" href="{{ project.url }}">
-            <div class="array-element">
+<h2>Check out my latest <a href="/programming-projects" style="color: black;">Blog</a> posts</h2>
+
+<div class="array-wrapper">
+    {% for project in programming-projects limit:3 %}
+    <a class="array-link" href="{{ project.url }}">
+        <div class="array-element border-hover">
+            {% if project.img %}
+            <div class="array-element-image-wrapper">
                 <img class="array-element-image" src="{{ project.img }}" alt="">
-                <h3 class="array-element-heading">{{ project.title }}</h3>
-                <p class="array-element-text">{{ project.date | date_to_string }}</p>
             </div>
-        </a>
-        {% endfor %}
-    </div>
+            {% endif %}
+            <h3 class="array-element-heading">{{ project.title }}</h3>
+            <p class="array-element-text">{{ project.date | date_to_string }}</p>
+        </div>
+    </a>
+    {% endfor %}
 </div>
+
 
 <script>
     let currentSlide = 0;

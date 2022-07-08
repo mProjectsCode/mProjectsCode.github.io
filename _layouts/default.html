@@ -1,43 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-	<title>{{ page.title }}</title>
-	<!-- link to main stylesheet -->
-	<link rel="stylesheet" type="text/css" href="/css/main.css">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<script src="/js/utility.js"></script>
-	<script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+    <title>{{ page.title }}</title>
+    <!-- link to main stylesheet -->
+    <link href="/css/main.css" rel="stylesheet" type="text/css">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="/js/utility.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
 </head>
-
 <body>
-	
-	<ol class="breadcrumb border">
-		<nav>
-			<ul>
-				<li><a href="/">Home</a></li>
-				<li><a href="/programming-projects">Blog</a></li>
-				<li><a href="/art-projects">Art</a></li>
-			</ul>
-		</nav>
-	</ol>
-	<div class="container" style="margin: 0px 10px 0px 10px;">
-		{{ content }}
+<nav class="navbar border">
+    <ul class="navbar-content">
+        <li class="navbar-element"><a href="/">Home</a></li>
+        <li class="navbar-element"><a href="/programming-projects">Blog</a></li>
+        <li class="navbar-element"><a href="/art-projects">Art</a></li>
+    </ul>
+</nav>
 
-	</div><!-- /.container -->
-	<footer>
-		<ol class="breadcrumb border">
-			<ul>
-				<li><a href="mailto:mProjectsCode@gmail.com">email</a></li>
-				<li><a href="https://github.com/mProjectsCode">github</a></li>
-				<li style="float: right; margin-right: 0px; margin-left: 20px;"><a href="#">Copyright All Rights Reserved</a></li>
-				<li style="float: right; margin-right: 0px; margin-left: 20px;"><a href="/impressum">Impressum</a></li>
-				<li style="float: right; margin-right: 0px; margin-left: 20px;"><a href="/privacy_statement_german">Datenschutz Erklärung</a></li>
-				<li style="float: right; margin-right: 0px; margin-left: 20px;"><a href="/privacy_statement_english">Privacy Policy</a></li>
-			</ul>
-		</ol>
-	</footer>
+<div class="container">
+    {{ content }}
+</div>
+
+<footer class="footer border">
+    <ul class="footer-content">
+        <li class="footer-element"><a href="mailto:mProjectsCode@gmail.com">email</a></li>
+        <li class="footer-element" style="flex: 1;"><a href="https://github.com/mProjectsCode">github</a></li>
+        <li class="footer-element"><a href="#">Copyright All Rights Reserved</a></li>
+        <li class="footer-element"><a href="/impressum">Impressum</a></li>
+        <li class="footer-element"><a href="/privacy_statement_german">Datenschutz Erklärung</a></li>
+        <li class="footer-element"><a href="/privacy_statement_english">Privacy Policy</a></li>
+    </ul>
+</footer>
 </body>
 
 </html>
