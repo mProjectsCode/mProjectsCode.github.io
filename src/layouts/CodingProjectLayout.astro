@@ -1,0 +1,34 @@
+---
+import type { MarkdownLayoutProps } from 'astro';
+import HeaderComponent from '../components/HeaderComponent.astro';
+import TagComponent from '../components/TagComponent.astro';
+import type { Tag } from '../utils/tag';
+import Layout from './Layout.astro';
+
+type Props = MarkdownLayoutProps<{
+	title: string,
+	description?: string,
+	tags?: Tag[],
+	priority?: number,
+}>;
+
+
+const { frontmatter, url } = Astro.props;
+---
+
+<Layout title={`Moritz Jung - ${frontmatter.title}`}>
+	<HeaderComponent route={['coding-projects', frontmatter.title]}></HeaderComponent>
+	
+	<div class="content-container">
+		<div class="content">
+			<h2>{frontmatter.title}</h2>
+			<div class="tag-container">
+				{frontmatter.tags?.map(tag =>
+					<TagComponent tag={tag}></TagComponent>
+				)}
+			</div>
+			<slot></slot>
+		</div>
+	</div>
+</Layout>
+

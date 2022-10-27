@@ -1,0 +1,136 @@
+---
+import CodingProjectCardComponent from '../components/CodingProjectCardComponent.astro';
+import HeaderComponent from '../components/HeaderComponent.astro';
+import TagComponent from '../components/TagComponent.astro';
+import Layout from '../layouts/Layout.astro';
+import { getAllCodingProjects } from '../utils/getProjects';
+
+
+
+interface Image {
+	src: string,
+	title: string,
+	subtitle: string,
+}
+
+const images: Image[] = [
+	{
+		src: '/img/art/white_lines/white_lines_1920x1080.png',
+		title: 'White Lines',
+		subtitle: 'Abstract white lines flowing through red-tinted terrain',
+	},
+	{
+		src: '/img/art/spikes_2/spikes_2_1706x480.png',
+		title: 'Spiky Landscape',
+		subtitle: 'A bizarre spiky and purple landscape',
+	},
+	{
+		src: '/img/art/wave_cube/wave_cube_1706x480.png',
+		title: 'Wave Cube',
+		subtitle: 'A strange alien like cube',
+	},
+	{
+		src: '/img/art/mandelbulb/mandelbulb_1920x1080.png',
+		title: 'Mandelbulb',
+		subtitle: 'A render of the Mandelbulb fractal',
+	},
+	{
+		src: '/img/art/julia_3d/julia_3d_1920x1080.png',
+		title: 'Julia 3D',
+		subtitle: 'A cut open three dimensional Julia fractal',
+	},
+	{
+		src: '/img/art/red_lines/red_lines_1920x1080.png',
+		title: 'Red Lines',
+		subtitle: 'Layered wavy red lines',
+	},
+	{
+		src: '/img/art/floating_hexagons/floating_hexagons_1920x1080.png',
+		title: 'Floating Hexagons',
+		subtitle: 'Mysterious hexagons floating above a bright white plane',
+	},
+	{
+		src: '/img/art/crystal_pillars/crystal_pillars_1215x1080.png',
+		title: 'Crystal Pillars',
+		subtitle: 'Two crystal pillars touching, in light and dark'
+	},
+	{
+		src: '/img/art/vase/vase_1920x1080.png',
+		title: 'Vase',
+		subtitle: 'A modern Vase design',
+	},
+];
+
+const asciiArt = `.....
+.###.
+.#.#.
+.###.
+.....`;
+
+
+const peojects = getAllCodingProjects();
+
+---
+
+<Layout title="Moritz Jung">
+	<div class="landing-page">
+		<HeaderComponent route={[]}></HeaderComponent>
+		<div class="lp-content">
+			<h1 class="heading text-effect">Moritz Jung</h1>
+			<span class="sub-heading text-effect text-effect-muted text-secondary">Software, Art and TTRPG Content</span>
+		</div>
+		<div class="lp-scroll" onclick="scrollToContent()">
+			Check out my work
+		</div>
+	</div>
+
+	<div class="content-container" id="content-container">
+		<div class="content">
+			<h1>About Me</h1>
+			<p>
+				Hi, my name Moritz Jung.
+				I am from Germany and I am currently studying computer science.				
+			</p>
+		</div>
+
+		<div class="content">
+			<h1>My Coding Projects</h1>
+			<p>
+				This is a list of my featured project. You can find a list of all my projects <a href="/coding-projects">here</a>.
+				Also feel free to take a look at <a href="https://github.com/mProjectsCode">my GitHub account</a>.
+			</p>
+			<div class="card-grid">
+				{peojects.map(project =>
+					<CodingProjectCardComponent project={project}></CodingProjectCardComponent>
+				)}
+			</div>
+			<p style="text-align: right;">
+				<a href="/coding-projects" class="button">see more</a>
+			</p>
+		</div>
+
+		<div class="content">
+			<h1>My Art</h1>
+			<p>
+				Here you can see some of my artwork. <br/> 
+				Tools I use include: <a href="https:\\www.blender.org">Blender</a>, <a href="https://www.gimp.org/">GIMP</a> and my own Fractal Rendering Engine.
+			</p>
+
+			<div class="image-grid">
+				{images.map((item) => (
+					<div class="image-grid-item">
+						<img src={item.src} alt={item.title} />
+						<div class="image-grid-item-overlay" onmouseenter="textEffect(this)" onmouseleave="textEffectInverted(this)">
+							<div class="image-grid-item-overlay-text">
+								<h4 class="text-effect text-effect-inverted">{item.title}</h4>
+								<span class="text-effect text-effect-inverted text-effect-muted text-secondary">{item.subtitle}</span>
+							</div>
+						</div>
+					</div>
+				))}
+			</div>
+
+		</div>
+	</div>
+</Layout>
+
