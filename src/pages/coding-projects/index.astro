@@ -1,0 +1,30 @@
+---
+import CodingProjectCardComponent from '../../components/CodingProjectCardComponent.astro';
+import HeaderComponent from '../../components/HeaderComponent.astro';
+import TagComponent from '../../components/TagComponent.astro';
+import Layout from '../../layouts/Layout.astro';
+import { getAllCodingProjects } from '../../utils/getProjects';
+
+const peojects = getAllCodingProjects();
+
+---
+
+<Layout title="Moritz Jung - coding projects">
+    <HeaderComponent route={['coding-projects']}></HeaderComponent>
+
+	<div class="content-container">
+		<div class="content">
+			<h1>My Coding Projects</h1>
+			<p>
+				This is a list of all my major coding projects.
+				Also feel free to take a look at <a href="https://github.com/mProjectsCode">my GitHub account</a>.
+			</p>
+			<div class="card-grid">
+				{peojects.map(project =>
+					<CodingProjectCardComponent project={project}></CodingProjectCardComponent>
+				)}
+			</div>
+		</div>
+	</div>
+</Layout>
+

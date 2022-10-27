@@ -1,0 +1,29 @@
+---
+export interface Props {
+	route: string[],
+}
+
+const { route } = Astro.props;
+
+let routeParts: {name: string, partialRoute: string}[] = [];
+let r = '/'
+
+for (const routePart of route) {
+    r += routePart + '/';
+    routeParts.push({name: routePart, partialRoute: r});
+}
+---
+
+<header class="header">
+    <span class="header-item">
+        <a class="stealth" href="/">mprojectscode.github.io</a>
+    </span>
+    {routeParts.map((routePart) => 
+        <>
+            <span style="wrap">/</span>
+            <span class="header-item">
+                <a class="stealth" href={routePart.partialRoute}>{routePart.name}</a>
+            </span>
+        </>
+    )}
+</header>

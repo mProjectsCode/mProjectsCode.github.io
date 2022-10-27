@@ -1,0 +1,36 @@
+---
+import type { Project } from '../utils/getProjects';
+import TagComponent from './TagComponent.astro';
+
+export interface Props {
+	project: Project,
+}
+
+const { project } = Astro.props;
+---
+
+<style lang="scss">
+.coding-project-card {
+    &:hover {
+        --tagOpacity: 1;
+    }
+
+    .text {
+        // line-height: 1.6;
+    }
+}
+
+</style>
+
+<div class="card coding-project-card">
+    <h4>{project.frontmatter.title}</h4>
+    <p class="text text-secondary">{project.frontmatter.description}</p>
+    <div class="card-footer">
+        <div class="tag-container">
+            {project.frontmatter.tags?.map(tag =>
+                <TagComponent tag={tag}></TagComponent>
+            )}
+        </div>
+        <a href={project.url} class="button">more</a>
+    </div>
+</div>

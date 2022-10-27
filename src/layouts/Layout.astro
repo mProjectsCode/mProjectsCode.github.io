@@ -1,0 +1,67 @@
+---
+export interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+
+import HeaderComponent from '../components/HeaderComponent.astro';
+
+import style from '../../public/styles/style.scss';
+
+const year = new Date().getFullYear();
+
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<script>
+			import { addEffectToLandingPage, preEncodeInverted, textEffect, textEffectInverted } from "../../public/scripts/utils"
+
+			addEffectToLandingPage();
+			preEncodeInverted();
+
+			// @ts-ignore
+			window.scrollToContent = function scrollToContent() {
+				document.getElementById("content-container")?.scrollIntoView();
+			}
+
+			// @ts-ignore
+			window.textEffect = textEffect
+			// @ts-ignore
+			window.textEffectInverted = textEffectInverted
+		</script>
+		<title>{title}</title>
+	</head>
+	<body>
+		
+
+
+		<slot></slot>
+
+		<div class="footer">
+			<div class="content-container">
+				<div>
+					<h4>Moritz Jung</h4>
+				</div>
+				<div>
+					<h6 class="underline">Contact</h6>
+					<p><a href="mailto:m.projects.code@gmail.com">m.projects.code@gmail.com</a></p>
+					<p><a href="https://github.com/mProjectsCode">GitHub</a></p>
+	
+				</div>
+				<div>
+					<h6 class="underline">Legal stuff</h6>
+					<p><a href="/privacyPolicy">Privacy Policy</a></p>
+					<p><a href="/datenschutz">Datenschutz</a></p>
+					<p><a href="/impressum">Impressum</a></p>
+					<p><a>Copyright {year}; All Rights Reserved</a></p>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
