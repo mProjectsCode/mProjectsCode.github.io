@@ -31,6 +31,6 @@ const { project } = Astro.props;
                 <TagComponent tag={tag}></TagComponent>
             )}
         </div>
-        <a href={project.url} class="button">more</a>
+        <a href={project.url} class="button" aria-label={`more information about this project`}>more</a>
     </div>
 </div>

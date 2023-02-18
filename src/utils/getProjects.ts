@@ -20,3 +20,13 @@ export function getAllCodingProjects(): Project[] {
         (b.frontmatter.priority ?? 0) - (a.frontmatter.priority ?? 0)
     );
 }
+
+export function getCodingProjectsByTag(tag: Tag): Project[] {
+    return (Object.values(
+        import.meta.glob('/src/pages/coding-projects/**/*.{md,mdx}', { eager: true })
+    ) as Project[]).filter(x =>
+        x.frontmatter.tags?.includes(tag)
+    ).sort((a, b) =>
+        (b.frontmatter.priority ?? 0) - (a.frontmatter.priority ?? 0)
+    );
+}

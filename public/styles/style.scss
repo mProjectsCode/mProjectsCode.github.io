@@ -84,13 +84,17 @@ a {
 
     &:hover {
         color: var(--font-primary);
-        text-decoration-color: var(--font-primary);
     }
 
     &.stealth {
         color: var(--font-primary);
         text-decoration: none;
     }
+}
+
+button {
+    border: none;
+    font-size: 1em;
 }
 
 p {
@@ -108,11 +112,6 @@ p {
 
 .text-terciary {
     color: var(--font-tertiary);
-}
-
-
-
-#app {
 }
 
 .landing-page {
@@ -174,7 +173,7 @@ p {
     justify-content: center;
 
     .heading {
-        font-size: 8em;
+        font-size: min(8em, 28vw);
         text-align: center;
     }
 
@@ -210,7 +209,7 @@ p {
 }
 
 .content-container {
-    max-width: 1200px;
+    max-width: 1000px;
     margin-left: auto;
     margin-right: auto;
     padding-inline: var(--spacing);
@@ -248,7 +247,7 @@ p {
         margin-top: var(--spacing);
         flex-direction: row;
         gap: var(--spacing-tiny);
-        align-items: center;
+        align-items: flex-end;
 
         > :nth-last-child(2) {
             flex: 1;
@@ -261,12 +260,17 @@ p {
 
 .button {
     padding: var(--spacing-small) var(--spacing);
+    color: var(--font-secondary);
     background: var(--bg-secondary);
 
     text-decoration: none;
     text-transform: uppercase;
 
+    
+    transition: all 100ms;
+
     &:hover {
+        color: var(--font-primary);
         background: var(--bg-tertiary);
     }
 

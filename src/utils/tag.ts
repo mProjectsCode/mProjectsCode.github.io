@@ -4,7 +4,8 @@ export enum Tag {
     JAVA = 'Java',
     C_SHARP = 'C#',
     TTRPG = 'TTRPG',
-    PATHFINDER = 'Pathfinder'
+    PATHFINDER = 'Pathfinder',
+    CSS = 'CSS'
 }
 
 export const tagColors: {name: Tag, color: string}[] = [
@@ -32,4 +33,12 @@ export const tagColors: {name: Tag, color: string}[] = [
         name: Tag.PATHFINDER,
         color: '#e2d893',
     },
+    {
+        name: Tag.CSS,
+        color: '#2e4ddd',
+    },
 ]
+
+export function getTagKey(tag: Tag): string {
+    return Object.entries(Tag).find(x => x[1] === tag)?.[0] ?? "";
+}

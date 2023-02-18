@@ -1,0 +1,44 @@
+---
+import CodingProjectCardComponent from "../../../components/CodingProjectCardComponent.astro";
+import HeaderComponent from "../../../components/HeaderComponent.astro";
+import TagComponent from "../../../components/TagComponent.astro";
+import Layout from "../../../layouts/Layout.astro";
+import { getCodingProjectsByTag } from "../../../utils/getProjects";
+import { Tag } from "../../../utils/tag";
+
+export function getStaticPaths() {
+	return Object.keys(Tag).map(x => {
+		return {params: {tag: encodeURI(x)}};
+	});
+}
+
+const tagString: string = decodeURI(Astro.params.tag as string);
+
+const tag: Tag = Tag[tagString as keyof typeof Tag];
+
+const peojects = getCodingProjectsByTag(tag);
+---
+
+<Layout title={`Moritz Jung - coding projects - ${tag}`}>
+    <HeaderComponent route={['coding-projects', 'tags', tag]}></HeaderComponent>
+
+	<div class="content-container">
+		<div class="content">
+			<h1>My Coding Projects</h1>
+			<p>
+				This is a list of all my major coding projects.
+				Also feel free to take a look at <a href="https://github.com/mProjectsCode">my GitHub account</a>.
+			</p>
+			<h4>Filter</h4>
+			<div>
+				<TagComponent tag={tag as Tag}></TagComponent>
+				<a class="button" href="/coding-projects">Clear</a>
+			</div>
+			<div class="card-grid">
+				{peojects.map(project =>
+					<CodingProjectCardComponent project={project}></CodingProjectCardComponent>
+				)}
+			</div>
+		</div>
+	</div>
+</Layout>
