@@ -46,6 +46,9 @@ html {
 body {
     background: var(--bg-primary);
     color: var(--font-primary);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 h1 {
@@ -210,9 +213,11 @@ p {
 
 .content-container {
     max-width: 1000px;
+    width: 1000px;
     margin-left: auto;
     margin-right: auto;
     padding-inline: var(--spacing);
+    flex: 1;
 }
 
 .content {
@@ -359,3 +364,26 @@ ul {
         }
     }
 }
+
+.cc404 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    .c404 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        h1 {
+            font-size: 8em;
+            text-align: center;
+        }
+
+        p {
+            text-align: center;
+        }
+    }
+}
+

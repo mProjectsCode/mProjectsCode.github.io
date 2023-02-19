@@ -26,13 +26,11 @@ const peojects = getCodingProjectsByTag(tag);
 		<div class="content">
 			<h1>My Coding Projects</h1>
 			<p>
-				This is a list of all my major coding projects.
-				Also feel free to take a look at <a href="https://github.com/mProjectsCode">my GitHub account</a>.
+				Filter by a specific tag.
 			</p>
-			<h4>Filter</h4>
 			<div>
 				<TagComponent tag={tag as Tag}></TagComponent>
-				<a class="button" href="/coding-projects">Clear</a>
+				<a class="button" href=".">Clear</a>
 			</div>
 			<div class="card-grid">
 				{peojects.map(project =>

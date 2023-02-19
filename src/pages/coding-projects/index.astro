@@ -18,6 +18,7 @@ const peojects = getAllCodingProjects();
 				This is a list of all my major coding projects.
 				Also feel free to take a look at <a href="https://github.com/mProjectsCode">my GitHub account</a>.
 			</p>
+			<a href="/coding-projects/tags" class="button" aria-label={`list of all tags`}>Filter By Tag</a>
 			<div class="card-grid">
 				{peojects.map(project =>
 					<CodingProjectCardComponent project={project}></CodingProjectCardComponent>
