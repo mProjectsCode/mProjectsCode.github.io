@@ -30,7 +30,7 @@ const peojects = getCodingProjectsByTag(tag);
 			</p>
 			<div>
 				<TagComponent tag={tag as Tag}></TagComponent>
-				<a class="button" href=".">Clear</a>
+				<a class="button" href="/coding-projects/tags">Clear</a>
 			</div>
 			<div class="card-grid">
 				{peojects.map(project =>
