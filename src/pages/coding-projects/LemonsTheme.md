@@ -16,3 +16,5 @@ Check it out on [GitHub](https://github.com/mProjectsCode/obsidian-lemons-theme)
 
 #### Description
 A clean, rounded, borderless and monospace theme for Obsidian.md.
+
+![Theme Picture](https://raw.githubusercontent.com/mProjectsCode/obsidian-lemons-theme/master/lemons-theme-picture.PNG)
