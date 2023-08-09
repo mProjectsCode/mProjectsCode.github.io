@@ -3,6 +3,8 @@ import CodingProjectCardComponent from '../../components/CodingProjectCardCompon
 import HeaderComponent from '../../components/HeaderComponent.astro';
 import Layout from '../../layouts/Layout.astro';
 import { getAllCodingProjects } from '../../utils/getProjects';
+import {Tag} from '../../utils/tag';
+import TagComponent from '../../components/TagComponent.astro';
 
 const peojects = getAllCodingProjects();
 
@@ -18,7 +20,9 @@ const peojects = getAllCodingProjects();
 				This is a list of all my major coding projects.
 				Also feel free to take a look at <a href="https://github.com/mProjectsCode">my GitHub account</a>.
 			</p>
-			<a href="/coding-projects/tags" class="button" aria-label={`list of all tags`}>Filter By Tag</a>
+			{Object.values(Tag).map(tag =>
+					<TagComponent tag={tag}></TagComponent>
+			)}
 			<div class="card-grid">
 				{peojects.map(project =>
 					<CodingProjectCardComponent project={project}></CodingProjectCardComponent>
