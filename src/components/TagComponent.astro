@@ -4,11 +4,7 @@ import { Tag, tagColors, getTagKey } from '../utils/tag';
 export interface Props {
 	tag: Tag,
 }
-
 const { tag } = Astro.props;
-
-// console.log(animate);
-
 
 const tagColor: string = tagColors.find(x => x.name === tag)?.color ?? '#FFFFFF';
 
@@ -23,6 +19,5 @@ const tagColor: string = tagColors.find(x => x.name === tag)?.color ?? '#FFFFFF'
         
     }
 </style>
-
 
 <a class="tag button" href={`/coding-projects/tags/${encodeURI(getTagKey(tag))}`}>{tag}</a>

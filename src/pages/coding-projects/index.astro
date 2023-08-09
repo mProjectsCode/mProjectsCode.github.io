@@ -20,9 +20,11 @@ const peojects = getAllCodingProjects();
 				This is a list of all my major coding projects.
 				Also feel free to take a look at <a href="https://github.com/mProjectsCode">my GitHub account</a>.
 			</p>
-			{Object.values(Tag).map(tag =>
-					<TagComponent tag={tag}></TagComponent>
-			)}
+            <div class="tag-container">
+				{Object.values(Tag).map(tag =>
+						<TagComponent tag={tag}></TagComponent>
+				)}
+            </div>
 			<div class="card-grid">
 				{peojects.map(project =>
 					<CodingProjectCardComponent project={project}></CodingProjectCardComponent>

@@ -11,7 +11,9 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^2.0.14"
+    "@astrojs/image": "^0.17.3",
+    "astro": "^2.0.14",
+    "sharp": "^0.32.4"
   },
   "devDependencies": {
     "sass": "^1.55.0"
