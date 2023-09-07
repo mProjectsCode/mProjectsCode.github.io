@@ -7,6 +7,7 @@ import Layout from './Layout.astro';
 
 type Props = MarkdownLayoutProps<{
 	title: string,
+	url_name: string,
 	description?: string,
 	tags?: Tag[],
 	priority?: number,
@@ -17,7 +18,7 @@ const { frontmatter, url } = Astro.props;
 ---
 
 <Layout title={`Moritz Jung - ${frontmatter.title}`}>
-	<HeaderComponent route={['coding-projects', frontmatter.title]}></HeaderComponent>
+	<HeaderComponent route={['coding-projects', [frontmatter.url_name, frontmatter.title]]}></HeaderComponent>
 	
 	<div class="content-container">
 		<div class="content">

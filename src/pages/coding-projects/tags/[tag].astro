@@ -20,7 +20,7 @@ const peojects = getCodingProjectsByTag(tag);
 ---
 
 <Layout title={`Moritz Jung - coding projects - ${tag}`}>
-    <HeaderComponent route={['coding-projects', 'tags', tag]}></HeaderComponent>
+    <HeaderComponent route={['coding-projects', 'tags', [Astro.params.tag, tag]]}></HeaderComponent>
 
 	<div class="content-container">
 		<div class="content">
@@ -28,7 +28,7 @@ const peojects = getCodingProjectsByTag(tag);
 			<p>
 				Filter by a specific tag.
 			</p>
-			<div>
+			<div class="tag-container">
 				<TagComponent tag={tag as Tag}></TagComponent>
 				<a class="button" href="/coding-projects">Clear</a>
 			</div>

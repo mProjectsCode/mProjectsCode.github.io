@@ -1,6 +1,6 @@
 ---
 export interface Props {
-	route: string[],
+	route: (string|[string, string])[],
 }
 
 const { route } = Astro.props;
@@ -9,8 +9,13 @@ let routeParts: {name: string, partialRoute: string}[] = [];
 let r = '/'
 
 for (const routePart of route) {
-    r += routePart + '/';
-    routeParts.push({name: routePart, partialRoute: r});
+    if (Array.isArray(routePart)) {
+        r += routePart[0] + '/';
+        routeParts.push({name: routePart[1], partialRoute: r});
+    } else {
+        r += routePart + '/';
+        routeParts.push({name: routePart, partialRoute: r});
+    }
 }
 ---
 

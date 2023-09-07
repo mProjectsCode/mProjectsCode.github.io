@@ -137,6 +137,9 @@ p {
     padding: var(--spacing);
     border: var(--spacing-finite) solid var(--accent-tertiary);
     background: transparent;
+    display: flex;
+    flex-direction: row;
+    gap: calc(var(--spacing) / 2);
 }
 
 .footer {
