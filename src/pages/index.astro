@@ -2,18 +2,18 @@
 import CodingProjectCardComponent from '../components/CodingProjectCardComponent.astro';
 import HeaderComponent from '../components/HeaderComponent.astro';
 import Layout from '../layouts/Layout.astro';
-import { getAllCodingProjects } from '../utils/getProjects';
+import {getAllCodingProjects, getTopCodingProjects} from '../utils/getProjects';
 import {images} from '../utils/images';
 
-const projects = getAllCodingProjects();
+const projects = getTopCodingProjects();
 ---
 
 <Layout title="Moritz Jung">
 	<div class="landing-page">
 		<HeaderComponent route={[]}></HeaderComponent>
 		<div class="lp-content">
-			<h1 class="heading text-effect">Moritz Jung</h1>
-			<span class="sub-heading text-effect text-effect-muted text-secondary">Software, Art and TTRPG Content</span>
+			<h1 class="heading">Moritz Jung</h1>
+			<span class="sub-heading">Software, Art and TTRPG Content</span>
 		</div>
 		<div class="lp-scroll" onclick="scrollToContent()">
 			Check out my work

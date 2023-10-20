@@ -5,7 +5,8 @@ export enum Tag {
     C_SHARP = 'C#',
     TTRPG = 'TTRPG',
     PATHFINDER = 'Pathfinder',
-    CSS = 'CSS'
+    CSS = 'CSS',
+    Rust = 'Rust'
 }
 
 export const tagColors: {name: Tag, color: string}[] = [
@@ -36,6 +37,10 @@ export const tagColors: {name: Tag, color: string}[] = [
     {
         name: Tag.CSS,
         color: '#2e4ddd',
+    },
+    {
+        name: Tag.Rust,
+        color: '#ce412b',
     },
 ]
 

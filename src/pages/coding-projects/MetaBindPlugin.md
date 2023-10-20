@@ -4,6 +4,7 @@ url_name: MetaBindPlugin
 description: A plugin for Obsidian that can create input fields inside your notes and bind them to metadata fields. 
 tags: ['Obsidian.md', 'TypeScript']
 layout: ../../layouts/CodingProjectLayout.astro
+featured: true
 ---
 
 Check it out on [GitHub](https://github.com/mProjectsCode/obsidian-meta-bind-plugin)

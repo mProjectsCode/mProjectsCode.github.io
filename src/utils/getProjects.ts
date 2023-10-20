@@ -5,7 +5,7 @@ export interface Project {
         title: string,
         description?: string,
         tags?: Tag[],
-        priority?: number,
+        featured?: boolean,
     }
 
     url: string
@@ -15,18 +15,29 @@ export interface Project {
 
 export function getAllCodingProjects(): Project[] {
     return (Object.values(
+        // @ts-ignore
         import.meta.glob('/src/pages/coding-projects/**/*.{md,mdx}', { eager: true })
     ) as Project[]).sort((a, b) =>
-        (b.frontmatter.priority ?? 0) - (a.frontmatter.priority ?? 0)
+        a.frontmatter.title.localeCompare(b.frontmatter.title)
     );
+}
+
+export function getTopCodingProjects(): Project[] {
+    return (Object.values(
+        // @ts-ignore
+        import.meta.glob('/src/pages/coding-projects/**/*.{md,mdx}', { eager: true })
+    ) as Project[]).sort((a, b) =>
+        a.frontmatter.title.localeCompare(b.frontmatter.title)
+    ).filter(x => x.frontmatter.featured === true);
 }
 
 export function getCodingProjectsByTag(tag: Tag): Project[] {
     return (Object.values(
+        // @ts-ignore
         import.meta.glob('/src/pages/coding-projects/**/*.{md,mdx}', { eager: true })
     ) as Project[]).filter(x =>
         x.frontmatter.tags?.includes(tag)
     ).sort((a, b) =>
-        (b.frontmatter.priority ?? 0) - (a.frontmatter.priority ?? 0)
+        a.frontmatter.title.localeCompare(b.frontmatter.title)
     );
 }

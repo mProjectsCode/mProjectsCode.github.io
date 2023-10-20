@@ -7,6 +7,11 @@ export interface Image {
 
 export const images: Image[] = [
 	{
+		src: '/img/art/julia_3d_2/julia_3d_2_1920x1080.png',
+		title: 'Swirly Julia 3D',
+		subtitle: 'A part of the cut open three dimensional Julia fractal',
+	},
+	{
 		src: '/img/art/white_lines/white_lines_1920x1080.png',
 		title: 'White Lines',
 		subtitle: 'Abstract white lines flowing through red-tinted terrain',
