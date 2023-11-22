@@ -3,6 +3,6 @@ import mdx from '@astrojs/mdx'
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://mprojectscode.github.io/',
+  site: 'https://www.moritzjung.io/',
   integrations: [mdx()]
 });
