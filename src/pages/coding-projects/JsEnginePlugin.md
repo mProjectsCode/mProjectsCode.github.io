@@ -1,7 +1,7 @@
 ---
 title: JS Engine
 url_name: JsEnginePlugin
-description: A way to run JavaScript form within your obsidian notes using markdown codeblocks.
+description: A way to run JavaScript from within your obsidian notes using markdown codeblocks.
 tags: ['Obsidian.md', 'TypeScript']
 layout: ../../layouts/CodingProjectLayout.astro
 featured: true
@@ -18,4 +18,4 @@ Check it out on [GitHub](https://github.com/mProjectsCode/obsidian-js-engine-plu
 
 #### Description
 
-A way to run JavaScript form within your obsidian notes using markdown codeblocks.
+A way to run JavaScript from within your obsidian notes using markdown codeblocks.
