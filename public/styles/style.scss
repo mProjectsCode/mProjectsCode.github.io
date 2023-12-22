@@ -136,19 +136,33 @@ p {
 .header {
     margin: var(--spacing);
     padding: var(--spacing);
-    border: var(--spacing-finite) solid var(--accent-tertiary);
+    border: var(--spacing-finite) solid;
+    border-color: var(--accent-tertiary);
     background: transparent;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     gap: calc(var(--spacing) / 2);
+
+    transition: border-color 100ms;
+
+    &:hover {
+        border-color: var(--accent-secondary);
+    }
 }
 
 .footer {
     margin: var(--spacing);
     padding: calc(var(--spacing) * 2) 0;
-    border: var(--spacing-finite) solid var(--accent-tertiary);
-    background: transparent;    
+    border: var(--spacing-finite) solid;
+    border-color: var(--accent-tertiary);
+    background: transparent;
+
+    transition: border-color 100ms;
+
+    &:hover {
+        border-color: var(--accent-secondary);
+    }
 
     .content-container {
         display: flex;
@@ -250,10 +264,18 @@ p {
 
 .card {
     padding: var(--spacing);
-    border: var(--spacing-finite) solid var(--accent-tertiary);
+    border: var(--spacing-finite) solid;
+    border-color: var(--accent-tertiary);
     display: flex;
     flex-direction: column;
     gap: var(--spacing);
+    cursor: pointer;
+
+    transition: border-color 100ms;
+
+    &:hover {
+        border-color: var(--accent-secondary);
+    }
     
     > :nth-last-child(2) {
         flex: 1;
