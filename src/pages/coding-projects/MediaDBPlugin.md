@@ -7,7 +7,6 @@ layout: ../../layouts/CodingProjectLayout.astro
 featured: true
 ---
 
-
 Check it out on [GitHub](https://github.com/mProjectsCode/obsidian-media-db-plugin)
 
 [![Github Downloads](https://img.shields.io/github/downloads/mProjectsCode/obsidian-media-db-plugin/total?style=flat-square&labelColor=1f1f1f&color=2E2E2E)](https://github.com/mProjectsCode/obsidian-media-db-plugin/releases/)
@@ -17,4 +16,5 @@ Check it out on [GitHub](https://github.com/mProjectsCode/obsidian-media-db-plug
 [![Github Last Commit](https://img.shields.io/github/last-commit/mProjectsCode/obsidian-media-db-plugin?style=flat-square&labelColor=1f1f1f&color=2E2E2E)](https://github.com/mProjectsCode/obsidian-media-db-plugin/)
 
 #### Description
+
 A plugin that can query multiple APIs for movies, series, anime, games, music and wiki articles, and import them into your vault.

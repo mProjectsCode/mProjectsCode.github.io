@@ -7,7 +7,6 @@ layout: ../../layouts/CodingProjectLayout.astro
 featured: true
 ---
 
-
 Check it out on [GitHub](https://github.com/mProjectsCode/obsidian-lemons-theme)
 
 [![Github Downloads](https://img.shields.io/github/downloads/mProjectsCode/obsidian-lemons-theme/total?style=flat-square&labelColor=1f1f1f&color=2E2E2E)](https://github.com/mProjectsCode/obsidian-lemons-theme/releases/)
@@ -17,6 +16,7 @@ Check it out on [GitHub](https://github.com/mProjectsCode/obsidian-lemons-theme)
 [![Github Last Commit](https://img.shields.io/github/last-commit/mProjectsCode/obsidian-lemons-theme?style=flat-square&labelColor=1f1f1f&color=2E2E2E)](https://github.com/mProjectsCode/obsidian-lemons-theme/)
 
 #### Description
+
 A clean, rounded, borderless and monospace theme for Obsidian.md.
 
 ![Theme Picture](https://raw.githubusercontent.com/mProjectsCode/obsidian-lemons-theme/master/lemons-theme-picture.PNG)

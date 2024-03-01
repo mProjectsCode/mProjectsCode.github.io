@@ -4,12 +4,15 @@ import HeaderComponent from '../components/HeaderComponent.astro';
 import Layout from '../layouts/Layout.astro';
 import {getAllCodingProjects, getTopCodingProjects} from '../utils/getProjects';
 import {images} from '../utils/images';
+import { Image } from 'astro:assets';
+import SwirlyJulia3d from '../img/art/julia_3d_2/julia_3d_2_1920x1080.png';
 
 const projects = getTopCodingProjects();
 ---
 
 <Layout title="Moritz Jung">
 	<div class="landing-page">
+		<Image src={SwirlyJulia3d} alt="landing page" quality="max" loading="eager"></Image>
 		<HeaderComponent route={[]}></HeaderComponent>
 		<div class="lp-content">
 			<h1 class="heading">Moritz Jung</h1>
@@ -55,7 +58,7 @@ const projects = getTopCodingProjects();
 			<div class="image-grid">
 				{images.map((item) => (
 					<div class="image-grid-item">
-						<img src={item.src} alt={item.title}></img>
+						<Image src={item.img} alt={item.title} loading="eager"></Image>
 						<div class="image-grid-item-overlay" onmouseenter="textEffect(this)" onmouseleave="textEffectInverted(this)">
 							<div class="image-grid-item-overlay-text">
 								<h4 class="text-effect text-effect-inverted">{item.title}</h4>

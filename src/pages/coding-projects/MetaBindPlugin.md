@@ -16,4 +16,5 @@ Check it out on [GitHub](https://github.com/mProjectsCode/obsidian-meta-bind-plu
 [![Github Last Commit](https://img.shields.io/github/last-commit/mProjectsCode/obsidian-meta-bind-plugin?style=flat-square&labelColor=1f1f1f&color=2E2E2E)](https://github.com/mProjectsCode/obsidian-meta-bind-plugin/)
 
 #### Description
-A plugin for Obsidian that can create input fields inside your notes and bind them to metadata fields.
+
+A plugin for Obsidian to make your notes interactive with inline input fields, metadata displays, and buttons. 

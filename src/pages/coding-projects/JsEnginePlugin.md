@@ -7,7 +7,6 @@ layout: ../../layouts/CodingProjectLayout.astro
 featured: true
 ---
 
-
 Check it out on [GitHub](https://github.com/mProjectsCode/obsidian-js-engine-plugin)
 
 [![Github Downloads](https://img.shields.io/github/downloads/mProjectsCode/obsidian-js-engine-plugin/total?style=flat-square&labelColor=1f1f1f&color=2E2E2E)](https://github.com/mProjectsCode/obsidian-js-engine-plugin/releases/)
@@ -18,4 +17,4 @@ Check it out on [GitHub](https://github.com/mProjectsCode/obsidian-js-engine-plu
 
 #### Description
 
-A way to run JavaScript from within your obsidian notes using markdown codeblocks.
+This plugin for Obsidian allows you to run JavaScript from within your notes using special code blocks.

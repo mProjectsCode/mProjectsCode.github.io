@@ -6,7 +6,8 @@ export enum Tag {
     TTRPG = 'TTRPG',
     PATHFINDER = 'Pathfinder',
     CSS = 'CSS',
-    Rust = 'Rust'
+    RUST = 'Rust',
+	ASTRO = 'Astro',
 }
 
 export const tagColors: {name: Tag, color: string}[] = [
@@ -39,9 +40,13 @@ export const tagColors: {name: Tag, color: string}[] = [
         color: '#2e4ddd',
     },
     {
-        name: Tag.Rust,
+        name: Tag.RUST,
         color: '#ce412b',
     },
+	{
+		name: Tag.ASTRO,
+		color: '#7445f6',
+	},
 ]
 
 export function getTagKey(tag: Tag): string {
