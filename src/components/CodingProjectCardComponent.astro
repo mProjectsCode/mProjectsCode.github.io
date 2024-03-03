@@ -3,7 +3,7 @@ import type { Project } from '../utils/getProjects';
 import TagComponent from './TagComponent.astro';
 
 export interface Props {
-	project: Project,
+	project: Project;
 }
 
 const { project } = Astro.props;
@@ -11,27 +11,23 @@ const openFunction = `location.href = '${project.url}'`;
 ---
 
 <style lang="scss">
+	.coding-project-card {
+		&:hover {
+			--tagOpacity: 1;
+		}
 
-.coding-project-card {
-    &:hover {
-        --tagOpacity: 1;
-    }
-
-    .text {
-        // line-height: 1.6;
-    }
-}
-
+		.text {
+			// line-height: 1.6;
+		}
+	}
 </style>
 
 <div class="card coding-project-card" onclick={openFunction}>
-    <h4>{project.frontmatter.title}</h4>
-    <p class="text text-secondary">{project.frontmatter.description}</p>
-    <div class="card-footer">
-        <div class="tag-container">
-            {project.frontmatter.tags?.map(tag =>
-                <TagComponent tag={tag}></TagComponent>
-            )}
-        </div>
-    </div>
+	<h4>{project.frontmatter.title}</h4>
+	<p class="text text-secondary">{project.frontmatter.description}</p>
+	<div class="card-footer">
+		<div class="tag-container">
+			{project.frontmatter.tags?.map(tag => <TagComponent tag={tag} />)}
+		</div>
+	</div>
 </div>

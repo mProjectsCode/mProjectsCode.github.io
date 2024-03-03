@@ -3,34 +3,27 @@ import CodingProjectCardComponent from '../../components/CodingProjectCardCompon
 import HeaderComponent from '../../components/HeaderComponent.astro';
 import Layout from '../../layouts/Layout.astro';
 import { getAllCodingProjects } from '../../utils/getProjects';
-import {Tag} from '../../utils/tag';
+import { Tag } from '../../utils/tag';
 import TagComponent from '../../components/TagComponent.astro';
 
 const peojects = getAllCodingProjects();
-
 ---
 
 <Layout title="Moritz Jung - coding projects">
-    <HeaderComponent route={['coding-projects']}></HeaderComponent>
+	<HeaderComponent route={['coding-projects']} />
 
 	<div class="content-container">
 		<div class="content">
 			<h1>My Coding Projects</h1>
 			<p>
-				This is a list of all my major coding projects.
-				Also feel free to take a look at <a href="https://github.com/mProjectsCode">my GitHub account</a>.
+				This is a list of all my major coding projects. Also feel free to take a look at <a href="https://github.com/mProjectsCode">my GitHub account</a>.
 			</p>
-            <div class="tag-container">
-				{Object.values(Tag).map(tag =>
-						<TagComponent tag={tag}></TagComponent>
-				)}
-            </div>
+			<div class="tag-container">
+				{Object.values(Tag).map(tag => <TagComponent tag={tag} />)}
+			</div>
 			<div class="card-grid">
-				{peojects.map(project =>
-					<CodingProjectCardComponent project={project}></CodingProjectCardComponent>
-				)}
+				{peojects.map(project => <CodingProjectCardComponent project={project} />)}
 			</div>
 		</div>
 	</div>
 </Layout>
-

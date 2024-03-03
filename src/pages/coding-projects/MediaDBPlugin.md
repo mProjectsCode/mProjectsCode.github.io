@@ -1,7 +1,7 @@
 ---
 title: Media DB Plugin
 url_name: MediaDBPlugin
-description: A plugin that can query multiple APIs for movies, series, anime, games, music and wiki articles, and import them into your vault. 
+description: A plugin that can query multiple APIs for movies, series, anime, games, music and wiki articles, and import them into your vault.
 tags: ['Obsidian.md', 'TypeScript']
 layout: ../../layouts/CodingProjectLayout.astro
 featured: true

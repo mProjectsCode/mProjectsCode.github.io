@@ -10,10 +10,10 @@ import CrystalPillars from '../img/art/crystal_pillars/crystal_pillars_1215x1080
 import Vase from '../img/art/vase/vase_1920x1080.png';
 
 export interface Image {
-	img: any,
-	src: string,
-	title: string,
-	subtitle: string,
+	img: any;
+	src: string;
+	title: string;
+	subtitle: string;
 }
 
 export const images: Image[] = [
@@ -69,7 +69,7 @@ export const images: Image[] = [
 		img: CrystalPillars,
 		src: '/img/art/crystal_pillars/crystal_pillars_1215x1080.png',
 		title: 'Crystal Pillars',
-		subtitle: 'Two crystal pillars touching, in light and dark'
+		subtitle: 'Two crystal pillars touching, in light and dark',
 	},
 	{
 		img: Vase,

@@ -1,7 +1,7 @@
 ---
 title: Lemons Theme
 url_name: LemonsTheme
-description: A clean, rounded, borderless and monospace theme for Obsidian.md. 
+description: A clean, rounded, borderless and monospace theme for Obsidian.md.
 tags: ['Obsidian.md', 'CSS']
 layout: ../../layouts/CodingProjectLayout.astro
 featured: true

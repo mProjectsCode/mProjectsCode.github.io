@@ -1,7 +1,7 @@
 ---
 title: Obsidian Table Top Templates
 url_name: ObsidianTableTopTemplates
-description: Table Top / World Building templates for Obsidian 
+description: Table Top / World Building templates for Obsidian
 tags: ['Obsidian.md', 'TTRPG', 'Pathfinder']
 layout: ../../layouts/CodingProjectLayout.astro
 ---

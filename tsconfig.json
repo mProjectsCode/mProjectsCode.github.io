@@ -1,8 +1,8 @@
 {
-  "extends": "astro/tsconfigs/strict",
-  "compilerOptions": {
-      "resolveJsonModule": true,
-      "esModuleInterop": true,
-    "types": ["@astrojs/image/client"]
-  }
+	"extends": "astro/tsconfigs/strict",
+	"compilerOptions": {
+		"resolveJsonModule": true,
+		"esModuleInterop": true,
+		"types": ["@astrojs/image/client"]
+	}
 }

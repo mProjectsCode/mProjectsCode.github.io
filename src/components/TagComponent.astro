@@ -2,22 +2,20 @@
 import { Tag, tagColors, getTagKey } from '../utils/tag';
 
 export interface Props {
-	tag: Tag,
+	tag: Tag;
 }
 const { tag } = Astro.props;
 
 const tagColor: string = tagColors.find(x => x.name === tag)?.color ?? '#FFFFFF';
-
 ---
 
-<style define:vars={{tagColor}} lang="scss">
-    .tag {
-        border-left: 5px solid var(--tagColor);
-    }
+<style define:vars={{ tagColor }} lang="scss">
+	.tag {
+		border-left: 5px solid var(--tagColor);
+	}
 
-    .tag-text {
-        
-    }
+	.tag-text {
+	}
 </style>
 
 <a class="tag button" href={`/coding-projects/tags/${encodeURI(getTagKey(tag))}`}>{tag}</a>

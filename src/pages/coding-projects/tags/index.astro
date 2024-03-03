@@ -2,27 +2,21 @@
 import HeaderComponent from '../../../components/HeaderComponent.astro';
 import TagComponent from '../../../components/TagComponent.astro';
 import Layout from '../../../layouts/Layout.astro';
-import { Tag } from "../../../utils/tag";
+import { Tag } from '../../../utils/tag';
 ---
 
 <Layout title="Moritz Jung - coding projects">
-    <HeaderComponent route={['coding-projects']}></HeaderComponent>
+	<HeaderComponent route={['coding-projects']} />
 
 	<div class="content-container">
 		<div class="content">
 			<h1>My Coding Projects</h1>
-            <p>
-                Filter by a specific tag.
-            </p>
-        
+			<p>Filter by a specific tag.</p>
+
 			<div>
-                {Object.values(Tag).map(tag => 
-                    <TagComponent tag={tag}></TagComponent>
-                )}
-                <a class="button" href="/coding-projects">See All</a>
-            </div>
-            
+				{Object.values(Tag).map(tag => <TagComponent tag={tag} />)}
+				<a class="button" href="/coding-projects">See All</a>
+			</div>
 		</div>
 	</div>
 </Layout>
-

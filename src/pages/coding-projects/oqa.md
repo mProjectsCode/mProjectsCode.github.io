@@ -1,7 +1,7 @@
 ---
 title: oqa
 url_name: oqa
-description: Obsidian Quick Access 
+description: Obsidian Quick Access
 tags: ['Obsidian.md', 'Astro']
 layout: ../../layouts/CodingProjectLayout.astro
 ---

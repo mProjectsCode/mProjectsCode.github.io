@@ -6,7 +6,6 @@ tags: ['Rust']
 layout: ../../layouts/CodingProjectLayout.astro
 ---
 
-
 Check it out on [GitHub](https://github.com/mProjectsCode/sphere-tracer-rust)
 
 [![Github Stars](https://img.shields.io/github/stars/mProjectsCode/sphere-tracer-rust?style=flat-square&labelColor=1f1f1f&color=2E2E2E)](https://github.com/mProjectsCode/sphere-tracer-rust/)

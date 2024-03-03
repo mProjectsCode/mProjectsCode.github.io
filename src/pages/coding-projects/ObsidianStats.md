@@ -1,7 +1,7 @@
 ---
 title: Obsidian Stats
 url_name: ObsidianStats
-description: View Stats for the Obsidian Eco-System. 
+description: View Stats for the Obsidian Eco-System.
 tags: ['Obsidian.md', 'Astro']
 layout: ../../layouts/CodingProjectLayout.astro
 featured: true
@@ -15,6 +15,6 @@ Check it out on [GitHub](https://github.com/mProjectsCode/obsidian-stats)
 
 #### Description
 
-View Stats for the Obsidian Eco-System. 
+View Stats for the Obsidian Eco-System.
 
 [Check it out!](https://www.moritzjung.dev/obsidian-stats/)
