@@ -4,7 +4,7 @@ url_name: ParsiNOM
 description: ParsiNOM is a modern, optimized and typesafe parser combinator library.
 tags: ['TypeScript']
 layout: ../../layouts/CodingProjectLayout.astro
-featured: true
+featured: false
 ---
 
 Check it out on [GitHub](https://github.com/mProjectsCode/parsiNOM)

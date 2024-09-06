@@ -3,6 +3,5 @@
 	"compilerOptions": {
 		"resolveJsonModule": true,
 		"esModuleInterop": true,
-		"types": ["@astrojs/image/client"]
 	}
 }
